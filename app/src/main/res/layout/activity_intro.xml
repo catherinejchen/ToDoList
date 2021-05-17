@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:padding="40dp"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:background="@color/background">
+
+    <TextView
+        android:id="@+id/titleViewIntro"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:padding="10dp"
+        android:text="WELCOME"
+        android:textColor="@color/colorAccentDark"
+        android:textSize="12dp"/>
+<!--        app:fontFamily="@font/amaranth"-->
+    <View
+        android:layout_below="@id/titleViewIntro"
+        android:id="@+id/headerLine"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/colorAccent"/>
+
+    <TextView
+        android:layout_below="@id/titleViewIntro"
+        android:id="@+id/nameHeader"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:text="What's your name?"
+        android:textSize="20dp"
+        android:textColor="@color/colorPrimaryDark"/>
+
+    <TextView
+        android:layout_below="@id/nameHeader"
+        android:id="@+id/nameHeader2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="5dp"
+        android:text="don’t worry! you can change this at any point"
+        android:textSize="14dp"
+        android:textColor="@color/colorPrimary"/>
+
+    <EditText
+        android:layout_below="@id/nameHeader2"
+        android:id="@+id/nameTextBox"
+        android:padding="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="enter name"
+        android:textColorHint="@color/colorPrimary"
+        android:textColor="@color/colorPrimaryDark"/>
+
+    <TextView
+        android:layout_below="@id/nameTextBox"
+        android:id="@+id/appModeHeader"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:text="Choose a mode"
+        android:textSize="20dp"
+        android:textColor="@color/colorPrimaryDark"/>
+
+    <TextView
+        android:layout_below="@id/appModeHeader"
+        android:id="@+id/appModeHeader2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="5dp"
+        android:text="what do you prefer to operate under"
+        android:textSize="14dp"
+        android:textColor="@color/colorPrimary"/>
+
+    <LinearLayout
+        android:layout_below="@id/appModeHeader2"
+        android:id="@+id/appModeWrapper"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:padding="10dp">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Light Mode"
+            android:textColor="@color/colorPrimaryDark"/>
+
+        <Switch
+            android:id="@+id/toggleModeButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="9dp"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Dark Mode"
+            android:textColor="@color/colorPrimaryDark"/>
+    ></LinearLayout>
+
+<!--    <Button-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_marginTop="36dp"-->
+<!--        android:background="@drawable/ic_launcher_background"-->
+<!--        android:id="@+id/pinkColourTheme"/>-->
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/next"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="18dp"
+        android:layout_marginBottom="16dp"
+        android:src="@drawable/arrow"
+        app:backgroundTint="@color/colorAccentDark"
+        app:borderWidth="2dp" />
+</RelativeLayout>
