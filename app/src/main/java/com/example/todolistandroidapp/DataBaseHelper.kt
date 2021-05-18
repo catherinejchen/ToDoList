@@ -39,12 +39,12 @@ class DataBaseHelper(var context: Context) : SQLiteOpenHelper(context, DATABASEN
         val db = this.writableDatabase
         // Create a new map of values, where column names are the keys
         val values = ContentValues().apply {
-            put(DBReaderHelper.FeedEntry.COLUMN_NAME_TITLE, title)
-            put(DBReaderHelper.FeedEntry.COLUMN_NAME_SUBTITLE, subtitle)
+            put(FeedEntry.COLUMN_NAME_TITLE, title)
+            put(FeedEntry.COLUMN_NAME_SUBTITLE, subtitle)
         }
 
         // Insert the new row, returning the primary key value of the new row
-        db.insert(DBReaderHelper.FeedEntry.TABLE_NAME, null, values)
+        db.insert(FeedEntry.TABLE_NAME, null, values)
 //        if (result == (0).toLong()) {
 //            Toast.makeText(context, "Failed", Toast.LENGTH_SHORT).show()
 //        }
@@ -55,7 +55,7 @@ class DataBaseHelper(var context: Context) : SQLiteOpenHelper(context, DATABASEN
 
     fun removeData(id: String) {
         val db = this.writableDatabase
-        db.execSQL("DELETE FROM ${DBReaderHelper.FeedEntry.TABLE_NAME} WHERE _id='${id}'")
+        db.execSQL("DELETE FROM ${FeedEntry.TABLE_NAME} WHERE _id='${id}'")
     }
 
     fun readData(): MutableList<Pair<String, String>> {

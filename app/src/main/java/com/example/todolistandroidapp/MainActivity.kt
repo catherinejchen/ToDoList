@@ -107,30 +107,6 @@ class MainActivity : AppCompatActivity() {
             editText.text.clear()
         }
 
-//       // Selecting and Deleting the items from the list when the delete button is pressed
-//        delete.setOnClickListener {
-//            val position: SparseBooleanArray = listView.checkedItemPositions
-//            val count = listView.count
-//            var item = count - 1
-//            while (item >= 0) {
-//                if (position.get(item))
-//                {
-//                    adapter.remove(itemlist.get(item))
-//                }
-//                item--
-//            }
-//            position.clear()
-//            adapter.notifyDataSetChanged()
-//        }
-
-
-//        // Clearing all the items in the list when the clear button is pressed
-//        clear.setOnClickListener {
-//
-//            itemlist.clear()
-//            adapter.notifyDataSetChanged()
-//        }
-
         listView.setOnItemClickListener { adapterView, view, i, l ->
             Toast.makeText(this, "You Selected the item --> "+ db.readData().map { it.second }.get(i), Toast.LENGTH_SHORT).show()
             delete.setOnClickListener {
